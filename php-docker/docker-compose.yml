@@ -17,6 +17,8 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: example
+    volumes:
+        - mysql-data:/var/lib/mysql
 
   adminer:
     image: adminer
@@ -25,7 +27,8 @@ services:
       - 8080:8080
 
 volumes:
-    mysql-data:      
+    mysql-data:
+ 
 #version: '3.1'
 
 #services:
